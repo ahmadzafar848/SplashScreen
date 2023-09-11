@@ -9,12 +9,11 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen()
         setContentView(R.layout.activity_splash)
         Handler(mainLooper).postDelayed({
-            val intent = Intent(this, MainActivity::class.java)
+            val intent=Intent(this,MainActivity::class.java)
             startActivity(intent)
-            finish() // Finish the SplashActivity to prevent it from being accessible with the back button
-        }, 3000)
+            finish()
+        },3000)
     }
 }
